@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Camera IP Address</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Found Cameras</h1>
+        <ul>
+            {% for camera in cameras %}
+            <li>IP Address: {{ camera.ip_address }}, MAC Address: {{ camera.mac_address }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
